@@ -4,6 +4,10 @@ __pycache__/
 *$py.class
 **/.env
 
+# src
+src/ch5/mnist_model.pkl
+
+
 # C extensions
 *.so
 

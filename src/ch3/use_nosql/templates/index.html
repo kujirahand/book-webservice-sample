@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>リアルタイムチャット</title>
+    <!-- socket.ioの読み込み (※8) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Socket.ioのセットアップ (※9)
+            const socket = io();
+
+            const messageInput = document.getElementById('message-input');
+            const messageButton = document.getElementById('send-message');
+            const messagesList = document.getElementById('messages');
+
+            // 受け取ったメッセージを描画する (※10)
+            const appendMessage = message => {
+                messagesList.appendChild('<li>' + message + '</li>');
+            };
+
+            // サーバーとの接続確立 (※11)
+            socket.on('connect', () => socket.emit('load messages'));
+
+            // メッセージ全件受信処理 (※12)
+            socket.on('load all messages', messages => messages.forEach(appendMessage));
+
+            // メッセージ送信処理 (※13)
+            messageButton.addEventListener('click', () => {
+                socket.emit('send message', messageInput.value);
+                messageInput.value = '';
+                return false;
+            });
+
+            // メッセージ受信処理 (※14)
+            socket.on('load one message', appendMessage);
+        });
+    </script>
+</head>
+<body>
+    <h1>リアルタイムチャット</h1>
+    <ul id="messages"></ul>
+    <input type="text" id="message-input" placeholder="メッセージを入力">
+    <button id="send-message">送信</button>
+</body>
+</html>

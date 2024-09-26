@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4277c7c958d5840d428d20d2c358c27b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4277c7c958d5840d428d20d2c358c27b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4277c7c958d5840d428d20d2c358c27b = L.map(
+                "map_4277c7c958d5840d428d20d2c358c27b",
+                {
+                    center: [35.690921, 139.700258],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6d022e5af08fc9baca1544867c098d7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f6d022e5af08fc9baca1544867c098d7.addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var marker_f12b6ec49b67b2771a325c77803971cd = L.marker(
+                [43.1867, 144.094261],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_40b9a82c6887166a9889f10f49dfbc3a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u91e7\u8def\u003cbr\u003e14\u2103\u003c/div\u003e\n            "});
+            marker_f12b6ec49b67b2771a325c77803971cd.setIcon(div_icon_40b9a82c6887166a9889f10f49dfbc3a);
+        
+    
+        var popup_f6584548b48ca17d20f9d75da7c0a72d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e880ffe19ce7a704ef5d4b18a936d40 = $(`<div id="html_5e880ffe19ce7a704ef5d4b18a936d40" style="width: 100.0%; height: 100.0%;">釧路 14℃</div>`)[0];
+                popup_f6584548b48ca17d20f9d75da7c0a72d.setContent(html_5e880ffe19ce7a704ef5d4b18a936d40);
+            
+        
+
+        marker_f12b6ec49b67b2771a325c77803971cd.bindPopup(popup_f6584548b48ca17d20f9d75da7c0a72d)
+        ;
+
+        
+    
+    
+            var marker_81409ec421ad9d8aaa7aa296aff9545f = L.marker(
+                [43.770858, 142.364983],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_f17670e6df4bee26d93abe0f0dd28531 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u65ed\u5ddd\u003cbr\u003e14\u2103\u003c/div\u003e\n            "});
+            marker_81409ec421ad9d8aaa7aa296aff9545f.setIcon(div_icon_f17670e6df4bee26d93abe0f0dd28531);
+        
+    
+        var popup_82595a61573868f46053e9bb7f62d2aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a570da3446eb193a72d115b74f40ee40 = $(`<div id="html_a570da3446eb193a72d115b74f40ee40" style="width: 100.0%; height: 100.0%;">旭川 14℃</div>`)[0];
+                popup_82595a61573868f46053e9bb7f62d2aa.setContent(html_a570da3446eb193a72d115b74f40ee40);
+            
+        
+
+        marker_81409ec421ad9d8aaa7aa296aff9545f.bindPopup(popup_82595a61573868f46053e9bb7f62d2aa)
+        ;
+
+        
+    
+    
+            var marker_4ba203d3ff61007f63b8656e0a9fb1ba = L.marker(
+                [43.065, 141.347],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_1cdde58e1950d4862ee2f297eb9e4b05 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u672d\u5e4c\u003cbr\u003e18\u2103\u003c/div\u003e\n            "});
+            marker_4ba203d3ff61007f63b8656e0a9fb1ba.setIcon(div_icon_1cdde58e1950d4862ee2f297eb9e4b05);
+        
+    
+        var popup_de82debada6c0ea904feb0e4916a8995 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ccb6309279e8a73dbe736b797018b485 = $(`<div id="html_ccb6309279e8a73dbe736b797018b485" style="width: 100.0%; height: 100.0%;">札幌 18℃</div>`)[0];
+                popup_de82debada6c0ea904feb0e4916a8995.setContent(html_ccb6309279e8a73dbe736b797018b485);
+            
+        
+
+        marker_4ba203d3ff61007f63b8656e0a9fb1ba.bindPopup(popup_de82debada6c0ea904feb0e4916a8995)
+        ;
+
+        
+    
+    
+            var marker_7b51d1909fd8bd39d7b2698dee27b45f = L.marker(
+                [40.824, 140.74],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_4f82309d409890ebaacc6a196ee68deb = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u9752\u68ee\u003cbr\u003e18\u2103\u003c/div\u003e\n            "});
+            marker_7b51d1909fd8bd39d7b2698dee27b45f.setIcon(div_icon_4f82309d409890ebaacc6a196ee68deb);
+        
+    
+        var popup_09dba1719600fa6d3d7a06f14f47ec9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5927c73df49856225f99b8aa70dc5b3 = $(`<div id="html_b5927c73df49856225f99b8aa70dc5b3" style="width: 100.0%; height: 100.0%;">青森 18℃</div>`)[0];
+                popup_09dba1719600fa6d3d7a06f14f47ec9d.setContent(html_b5927c73df49856225f99b8aa70dc5b3);
+            
+        
+
+        marker_7b51d1909fd8bd39d7b2698dee27b45f.bindPopup(popup_09dba1719600fa6d3d7a06f14f47ec9d)
+        ;
+
+        
+    
+    
+            var marker_8379ff191451f91c5d933ced94d03800 = L.marker(
+                [39.719, 140.102],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_bc7be0a8ff616c25f0ddc3db408dc487 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u79cb\u7530\u003cbr\u003e23\u2103\u003c/div\u003e\n            "});
+            marker_8379ff191451f91c5d933ced94d03800.setIcon(div_icon_bc7be0a8ff616c25f0ddc3db408dc487);
+        
+    
+        var popup_995dacd7cb710f099bd8e0a1fa5a4321 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd633a9ba426f4b68e1d695930b6b7f2 = $(`<div id="html_cd633a9ba426f4b68e1d695930b6b7f2" style="width: 100.0%; height: 100.0%;">秋田 23℃</div>`)[0];
+                popup_995dacd7cb710f099bd8e0a1fa5a4321.setContent(html_cd633a9ba426f4b68e1d695930b6b7f2);
+            
+        
+
+        marker_8379ff191451f91c5d933ced94d03800.bindPopup(popup_995dacd7cb710f099bd8e0a1fa5a4321)
+        ;
+
+        
+    
+    
+            var marker_c6545252d2c5831e56b64a76d83bb225 = L.marker(
+                [38.269, 140.872],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_40291ebcdf1e8f653f8ff6a5ba25b5e6 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u4ed9\u53f0\u003cbr\u003e22\u2103\u003c/div\u003e\n            "});
+            marker_c6545252d2c5831e56b64a76d83bb225.setIcon(div_icon_40291ebcdf1e8f653f8ff6a5ba25b5e6);
+        
+    
+        var popup_e837bb5fa6fe9c3f63de7c2a5aa526a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88db4f1ddf919fa1c68ce667116ca75d = $(`<div id="html_88db4f1ddf919fa1c68ce667116ca75d" style="width: 100.0%; height: 100.0%;">仙台 22℃</div>`)[0];
+                popup_e837bb5fa6fe9c3f63de7c2a5aa526a5.setContent(html_88db4f1ddf919fa1c68ce667116ca75d);
+            
+        
+
+        marker_c6545252d2c5831e56b64a76d83bb225.bindPopup(popup_e837bb5fa6fe9c3f63de7c2a5aa526a5)
+        ;
+
+        
+    
+    
+            var marker_8bde0cbed7d55b17b13dcca4287b76e8 = L.marker(
+                [37.903, 139.023],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_d50d90245a72d8287793dcf0f72da4e0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u65b0\u6f5f\u003cbr\u003e24\u2103\u003c/div\u003e\n            "});
+            marker_8bde0cbed7d55b17b13dcca4287b76e8.setIcon(div_icon_d50d90245a72d8287793dcf0f72da4e0);
+        
+    
+        var popup_f8e8aaf79d9dba986982cc56e133d09c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f7791d1d68537075d01463cc8dc8457 = $(`<div id="html_0f7791d1d68537075d01463cc8dc8457" style="width: 100.0%; height: 100.0%;">新潟 24℃</div>`)[0];
+                popup_f8e8aaf79d9dba986982cc56e133d09c.setContent(html_0f7791d1d68537075d01463cc8dc8457);
+            
+        
+
+        marker_8bde0cbed7d55b17b13dcca4287b76e8.bindPopup(popup_f8e8aaf79d9dba986982cc56e133d09c)
+        ;
+
+        
+    
+    
+            var marker_237c651b26dfa4cd708d01a4b0ddaec3 = L.marker(
+                [36.595, 136.626],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_30d12470d375cc7a3574562b1cb4125d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u91d1\u6ca2\u003cbr\u003e25\u2103\u003c/div\u003e\n            "});
+            marker_237c651b26dfa4cd708d01a4b0ddaec3.setIcon(div_icon_30d12470d375cc7a3574562b1cb4125d);
+        
+    
+        var popup_5738c9330c9a212283f600679aab88e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d73a1a6d970dae1deb6c33653ef3341 = $(`<div id="html_9d73a1a6d970dae1deb6c33653ef3341" style="width: 100.0%; height: 100.0%;">金沢 25℃</div>`)[0];
+                popup_5738c9330c9a212283f600679aab88e7.setContent(html_9d73a1a6d970dae1deb6c33653ef3341);
+            
+        
+
+        marker_237c651b26dfa4cd708d01a4b0ddaec3.bindPopup(popup_5738c9330c9a212283f600679aab88e7)
+        ;
+
+        
+    
+    
+            var marker_3c2d3e54b7a409f32fb4a893d343fa83 = L.marker(
+                [35.689, 139.692],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_46b36ba8cb47e95b04d0f1cae1da6ba1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u6771\u4eac\u003cbr\u003e25\u2103\u003c/div\u003e\n            "});
+            marker_3c2d3e54b7a409f32fb4a893d343fa83.setIcon(div_icon_46b36ba8cb47e95b04d0f1cae1da6ba1);
+        
+    
+        var popup_b264ffbee00b7b71baad3a1bba22a3ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_03441bee3592cd4b22ef444ac54ef385 = $(`<div id="html_03441bee3592cd4b22ef444ac54ef385" style="width: 100.0%; height: 100.0%;">東京 25℃</div>`)[0];
+                popup_b264ffbee00b7b71baad3a1bba22a3ab.setContent(html_03441bee3592cd4b22ef444ac54ef385);
+            
+        
+
+        marker_3c2d3e54b7a409f32fb4a893d343fa83.bindPopup(popup_b264ffbee00b7b71baad3a1bba22a3ab)
+        ;
+
+        
+    
+    
+            var marker_f5bcf2d6a57d251ae7279407dc0e01ff = L.marker(
+                [36.563, 139.883],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_93f40e42358a6f89e3d79633fc1910d8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u5b87\u90fd\u5bae\u003cbr\u003e24\u2103\u003c/div\u003e\n            "});
+            marker_f5bcf2d6a57d251ae7279407dc0e01ff.setIcon(div_icon_93f40e42358a6f89e3d79633fc1910d8);
+        
+    
+        var popup_69872dbeee6353b7c27ab2f18cf61918 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b318ac2063012816f12a8809cd8f46c8 = $(`<div id="html_b318ac2063012816f12a8809cd8f46c8" style="width: 100.0%; height: 100.0%;">宇都宮 24℃</div>`)[0];
+                popup_69872dbeee6353b7c27ab2f18cf61918.setContent(html_b318ac2063012816f12a8809cd8f46c8);
+            
+        
+
+        marker_f5bcf2d6a57d251ae7279407dc0e01ff.bindPopup(popup_69872dbeee6353b7c27ab2f18cf61918)
+        ;
+
+        
+    
+    
+            var marker_a8e3155dcf7fb1b8bff0d0fd13ff1fda = L.marker(
+                [36.651, 138.181],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_2205590f8cc55401fd78696fec0b470a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u9577\u91ce\u003cbr\u003e24\u2103\u003c/div\u003e\n            "});
+            marker_a8e3155dcf7fb1b8bff0d0fd13ff1fda.setIcon(div_icon_2205590f8cc55401fd78696fec0b470a);
+        
+    
+        var popup_c512f01376b6a10c183a3f708b5ec6cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f44231b10235541dccd1b48d6607e90a = $(`<div id="html_f44231b10235541dccd1b48d6607e90a" style="width: 100.0%; height: 100.0%;">長野 24℃</div>`)[0];
+                popup_c512f01376b6a10c183a3f708b5ec6cb.setContent(html_f44231b10235541dccd1b48d6607e90a);
+            
+        
+
+        marker_a8e3155dcf7fb1b8bff0d0fd13ff1fda.bindPopup(popup_c512f01376b6a10c183a3f708b5ec6cb)
+        ;
+
+        
+    
+    
+            var marker_0e434bf9b552e07a9a0a2afde67842f1 = L.marker(
+                [35.18, 136.907],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_96d340ecdb96060dd86dce29dbcaaa65 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u540d\u53e4\u5c4b\u003cbr\u003e26\u2103\u003c/div\u003e\n            "});
+            marker_0e434bf9b552e07a9a0a2afde67842f1.setIcon(div_icon_96d340ecdb96060dd86dce29dbcaaa65);
+        
+    
+        var popup_92df0b5c918a602e6110c9cdfc41537c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c1e1a78efe3256409e5a7a8ba955274 = $(`<div id="html_0c1e1a78efe3256409e5a7a8ba955274" style="width: 100.0%; height: 100.0%;">名古屋 26℃</div>`)[0];
+                popup_92df0b5c918a602e6110c9cdfc41537c.setContent(html_0c1e1a78efe3256409e5a7a8ba955274);
+            
+        
+
+        marker_0e434bf9b552e07a9a0a2afde67842f1.bindPopup(popup_92df0b5c918a602e6110c9cdfc41537c)
+        ;
+
+        
+    
+    
+            var marker_9c43b601871daec6cc293bb8c3943ee1 = L.marker(
+                [34.686, 135.52],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_92d0fce2a999172532f91be7a265057b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u5927\u962a\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_9c43b601871daec6cc293bb8c3943ee1.setIcon(div_icon_92d0fce2a999172532f91be7a265057b);
+        
+    
+        var popup_b9011661c4a55be59168d76efd372521 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6eb3a53ceea2e49fd91760f61bbae869 = $(`<div id="html_6eb3a53ceea2e49fd91760f61bbae869" style="width: 100.0%; height: 100.0%;">大阪 27℃</div>`)[0];
+                popup_b9011661c4a55be59168d76efd372521.setContent(html_6eb3a53ceea2e49fd91760f61bbae869);
+            
+        
+
+        marker_9c43b601871daec6cc293bb8c3943ee1.bindPopup(popup_b9011661c4a55be59168d76efd372521)
+        ;
+
+        
+    
+    
+            var marker_b9c9aa160bd875be6761c55ff648b008 = L.marker(
+                [34.34, 134.043],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_e9289ce658eaaad9e0fa08b7c3397601 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u9ad8\u677e\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_b9c9aa160bd875be6761c55ff648b008.setIcon(div_icon_e9289ce658eaaad9e0fa08b7c3397601);
+        
+    
+        var popup_cc942cb33ab9b17faa37055f491f9147 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96c72da719a279c9c71ff9ffffe2c1e4 = $(`<div id="html_96c72da719a279c9c71ff9ffffe2c1e4" style="width: 100.0%; height: 100.0%;">高松 27℃</div>`)[0];
+                popup_cc942cb33ab9b17faa37055f491f9147.setContent(html_96c72da719a279c9c71ff9ffffe2c1e4);
+            
+        
+
+        marker_b9c9aa160bd875be6761c55ff648b008.bindPopup(popup_cc942cb33ab9b17faa37055f491f9147)
+        ;
+
+        
+    
+    
+            var marker_4f44a704379a052817ed1d0a3ba4cb18 = L.marker(
+                [35.472, 133.05],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_3df8db67ae00217ca3348b2e478d32a4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u677e\u6c5f\u003cbr\u003e25\u2103\u003c/div\u003e\n            "});
+            marker_4f44a704379a052817ed1d0a3ba4cb18.setIcon(div_icon_3df8db67ae00217ca3348b2e478d32a4);
+        
+    
+        var popup_5c27543e173c95ec5f57481f9f3377de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f07153db35c3ef5cecfc7966223b9fe = $(`<div id="html_0f07153db35c3ef5cecfc7966223b9fe" style="width: 100.0%; height: 100.0%;">松江 25℃</div>`)[0];
+                popup_5c27543e173c95ec5f57481f9f3377de.setContent(html_0f07153db35c3ef5cecfc7966223b9fe);
+            
+        
+
+        marker_4f44a704379a052817ed1d0a3ba4cb18.bindPopup(popup_5c27543e173c95ec5f57481f9f3377de)
+        ;
+
+        
+    
+    
+            var marker_ddabcc0100e5a0cce17a5b6afb741d6d = L.marker(
+                [34.397, 132.46],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_ecfd5546e538f75f1b26bbbfa9cab15d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u5e83\u5cf6\u003cbr\u003e26\u2103\u003c/div\u003e\n            "});
+            marker_ddabcc0100e5a0cce17a5b6afb741d6d.setIcon(div_icon_ecfd5546e538f75f1b26bbbfa9cab15d);
+        
+    
+        var popup_5c91c77e793f2c678ad46a5943f25794 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_743a9797f0511566c095bab042f126aa = $(`<div id="html_743a9797f0511566c095bab042f126aa" style="width: 100.0%; height: 100.0%;">広島 26℃</div>`)[0];
+                popup_5c91c77e793f2c678ad46a5943f25794.setContent(html_743a9797f0511566c095bab042f126aa);
+            
+        
+
+        marker_ddabcc0100e5a0cce17a5b6afb741d6d.bindPopup(popup_5c91c77e793f2c678ad46a5943f25794)
+        ;
+
+        
+    
+    
+            var marker_698c7d49b0bd7c60c9dedb73c3de520c = L.marker(
+                [33.56, 133.531],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_60b4f7f00dd2adc83b26d7a8fa304ec8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u9ad8\u77e5\u003cbr\u003e25\u2103\u003c/div\u003e\n            "});
+            marker_698c7d49b0bd7c60c9dedb73c3de520c.setIcon(div_icon_60b4f7f00dd2adc83b26d7a8fa304ec8);
+        
+    
+        var popup_58f2c96d43a92c79d7d67b2ab19fb1dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b999904a89fc812c4d2bf61cd2ee0c7 = $(`<div id="html_5b999904a89fc812c4d2bf61cd2ee0c7" style="width: 100.0%; height: 100.0%;">高知 25℃</div>`)[0];
+                popup_58f2c96d43a92c79d7d67b2ab19fb1dc.setContent(html_5b999904a89fc812c4d2bf61cd2ee0c7);
+            
+        
+
+        marker_698c7d49b0bd7c60c9dedb73c3de520c.bindPopup(popup_58f2c96d43a92c79d7d67b2ab19fb1dc)
+        ;
+
+        
+    
+    
+            var marker_49c51dca0e730e7fdb85f11eba4b189e = L.marker(
+                [33.607, 130.418],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_309c084c1ee42b03acbf3205e39f2f38 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u798f\u5ca1\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_49c51dca0e730e7fdb85f11eba4b189e.setIcon(div_icon_309c084c1ee42b03acbf3205e39f2f38);
+        
+    
+        var popup_8839e0f920e4c36300a76eebd0d06478 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95f8c7c9b3b0edc57e83a580db4e804e = $(`<div id="html_95f8c7c9b3b0edc57e83a580db4e804e" style="width: 100.0%; height: 100.0%;">福岡 27℃</div>`)[0];
+                popup_8839e0f920e4c36300a76eebd0d06478.setContent(html_95f8c7c9b3b0edc57e83a580db4e804e);
+            
+        
+
+        marker_49c51dca0e730e7fdb85f11eba4b189e.bindPopup(popup_8839e0f920e4c36300a76eebd0d06478)
+        ;
+
+        
+    
+    
+            var marker_14d78794090e4197a0b7c3d8acfbd528 = L.marker(
+                [31.56, 130.558],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_162151b7ec8ed5fcdb5154623638e773 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u9e7f\u5150\u5cf6\u003cbr\u003e28\u2103\u003c/div\u003e\n            "});
+            marker_14d78794090e4197a0b7c3d8acfbd528.setIcon(div_icon_162151b7ec8ed5fcdb5154623638e773);
+        
+    
+        var popup_36ce9f1943342ac542c343e00c26de0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3953cc738268b514a3c304025c28b075 = $(`<div id="html_3953cc738268b514a3c304025c28b075" style="width: 100.0%; height: 100.0%;">鹿児島 28℃</div>`)[0];
+                popup_36ce9f1943342ac542c343e00c26de0e.setContent(html_3953cc738268b514a3c304025c28b075);
+            
+        
+
+        marker_14d78794090e4197a0b7c3d8acfbd528.bindPopup(popup_36ce9f1943342ac542c343e00c26de0e)
+        ;
+
+        
+    
+    
+            var marker_cf06335a4f394c22b79ee927b3de8afc = L.marker(
+                [27.995958, 129.251929],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_8d9ce94ff05d08a8d5b59d8f70cccf14 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u5944\u7f8e\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_cf06335a4f394c22b79ee927b3de8afc.setIcon(div_icon_8d9ce94ff05d08a8d5b59d8f70cccf14);
+        
+    
+        var popup_54922f106b52444c72852e5e4477794f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5505cbd06af4fd2fb3bb07914688c7c = $(`<div id="html_c5505cbd06af4fd2fb3bb07914688c7c" style="width: 100.0%; height: 100.0%;">奄美 27℃</div>`)[0];
+                popup_54922f106b52444c72852e5e4477794f.setContent(html_c5505cbd06af4fd2fb3bb07914688c7c);
+            
+        
+
+        marker_cf06335a4f394c22b79ee927b3de8afc.bindPopup(popup_54922f106b52444c72852e5e4477794f)
+        ;
+
+        
+    
+    
+            var marker_169d5f1cdc420a786737a0a52d29987d = L.marker(
+                [26.212, 127.681],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_4a8b3202bebd09e17f33f43526fae83d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u90a3\u8987\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_169d5f1cdc420a786737a0a52d29987d.setIcon(div_icon_4a8b3202bebd09e17f33f43526fae83d);
+        
+    
+        var popup_b68343ad6b73142a033556abdda72496 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25818c02a57a0dd707bedcc31d4bfcc9 = $(`<div id="html_25818c02a57a0dd707bedcc31d4bfcc9" style="width: 100.0%; height: 100.0%;">那覇 27℃</div>`)[0];
+                popup_b68343ad6b73142a033556abdda72496.setContent(html_25818c02a57a0dd707bedcc31d4bfcc9);
+            
+        
+
+        marker_169d5f1cdc420a786737a0a52d29987d.bindPopup(popup_b68343ad6b73142a033556abdda72496)
+        ;
+
+        
+    
+    
+            var marker_d3ede7a5bf871fe5c3f367b7c1fd77a5 = L.marker(
+                [24.472382, 124.205325],
+                {}
+            ).addTo(map_4277c7c958d5840d428d20d2c358c27b);
+        
+    
+            var div_icon_91d606692dad4fe80897bb1774cadbed = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size:7pt; width:25pt;\n            text-align:right; padding:2pt; color:black;\n            background-color:rgba(255,255,255,0.7);\u0027\u003e\u77f3\u57a3\u003cbr\u003e27\u2103\u003c/div\u003e\n            "});
+            marker_d3ede7a5bf871fe5c3f367b7c1fd77a5.setIcon(div_icon_91d606692dad4fe80897bb1774cadbed);
+        
+    
+        var popup_029a694140b9840f6b5d35c26ed5f81a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c154c1f7c7276a0c652d22cf8dbf25b0 = $(`<div id="html_c154c1f7c7276a0c652d22cf8dbf25b0" style="width: 100.0%; height: 100.0%;">石垣 27℃</div>`)[0];
+                popup_029a694140b9840f6b5d35c26ed5f81a.setContent(html_c154c1f7c7276a0c652d22cf8dbf25b0);
+            
+        
+
+        marker_d3ede7a5bf871fe5c3f367b7c1fd77a5.bindPopup(popup_029a694140b9840f6b5d35c26ed5f81a)
+        ;
+
+        
+    
+</script>
+</html>

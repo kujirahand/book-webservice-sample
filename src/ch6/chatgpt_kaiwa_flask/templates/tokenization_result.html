@@ -1,0 +1,22 @@
+<!-- 「base.html」を継承 -->
+{% extends "base.html" %}
+
+<!-- タイトルブロックを書き換える -->
+{% block title %}
+日タイ翻訳ページ
+{% endblock %}
+
+<!-- ヘッダブロックを書き換える -->
+{% block header %}
+単語分割結果
+{% endblock %}
+
+<!-- コンテンツブロックを書き換える -->
+{% block contents %}
+<!-- 単語分割の結果を表示 --- (※１０)  -->
+<div class="card p-6">
+    {{tokenization_result|safe }}
+</div>
+<a href="{{url_for('index')}}" class="button is-primary">トップへ戻る</a>
+
+{% endblock %}

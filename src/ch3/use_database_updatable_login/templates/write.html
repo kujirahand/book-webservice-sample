@@ -1,0 +1,23 @@
+<!-- 「base.html」を継承 -->
+{% extends "base.html" %}
+
+<!-- タイトルブロックを書き換える -->
+{% block title %}
+掲示板の書き込みページ
+{% endblock %}
+
+<!-- ヘッダブロックを書き換える -->
+{% block header %}
+掲示板の書き込みページ
+{% endblock %}
+
+<!-- コンテンツブロックを書き換える -->
+{% block contents %}
+<!-- メッセージ内容やユーザー名を送信するフォームを定義 ---（※１） -->
+<form action="{{url_for('write')}}" method="POST">
+    <p><textarea name="contents" rows="5" cols="60"></textarea></p>
+    <input type="hidden" name="user_name" value="{{login_user_name}}"></label>
+    <input type="submit" value="書き込み">
+
+</form>
+{% endblock %}

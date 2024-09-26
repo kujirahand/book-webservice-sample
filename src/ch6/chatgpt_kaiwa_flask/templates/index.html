@@ -1,0 +1,24 @@
+<!-- 「base.html」を継承 -->
+{% extends "base.html" %}
+
+<!-- タイトルブロックを書き換える -->
+{% block title %}
+日英翻訳ページ
+{% endblock %}
+
+<!-- ヘッダブロックを書き換える -->
+{% block header %}
+日英翻訳ツール
+{% endblock %}
+
+<!-- コンテンツブロックを書き換える -->
+{% block contents %}
+<!-- 翻訳したい文章を送信するフォームを定義 --- (※８) -->
+<form action="{{url_for('translate')}}" method="POST">
+    <div class="card p-3">
+        <label class="label" for="user_input">英語に翻訳したい文章を日本語で入力してください:</label><br>
+        <textarea id="user_input" name="user_input" rows="10" cols="80" class="textarea"></textarea>
+    </div>
+    <input type="submit" value="英語に翻訳" class="button is-primary">
+</form>
+{% endblock %}

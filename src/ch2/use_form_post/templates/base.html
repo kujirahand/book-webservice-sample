@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- タイトルブロックを定義 -->
+    <title>
+        {% block title %}
+        <!-- ここにタイトルを表示 -->
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <!-- ヘッダブロックを定義 -->
+            {% block header %}
+            <!-- ここにヘッダを表示 -->
+            {% endblock %}
+        </h1>
+        <!-- 各画面へのメニュー -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- 「/」にアクセスするURLを作成 -->
+                    <a href="{{url_for('index')}}">トップページ</a>
+                </li>
+                <li>
+                    <!-- 「/write」にアクセスするURLを作成 -->
+                    <a href="{{url_for('write')}}">書き込みページ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- コンテンツブロックを定義 -->
+        {% block contents %}
+        <!-- ここにコンテンツを表示 -->
+        <!-- デフォルトで「まだ何もコンテンツがありません。」を表示する -->
+        まだ何もコンテンツがありません。
+        {% endblock %}
+    </main>
+</body>
+
+</html>

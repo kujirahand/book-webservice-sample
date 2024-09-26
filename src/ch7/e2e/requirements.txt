@@ -1,0 +1,2 @@
+Selenium==4.24.0
+webdriver-manager==4.0.2

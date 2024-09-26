@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 バリデーション サンプル</title>
+</head>
+<body>
+    <h2>ユーザー登録フォーム</h2>
+    <form method="post">
+        <!-- 必須フィールド -->
+        <label for="username">ユーザー名 (必須):</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <!-- メールアドレスの形式チェック -->
+        <label for="email">メールアドレス (必須):</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- パスワードの最小文字数チェック -->
+        <label for="password">パスワード (必須, 最小8文字):</label>
+        <input type="password" id="password" name="password" minlength="8" required><br><br>
+
+        <!-- フォームの送信ボタン -->
+        <input type="submit" value="登録">
+    </form>
+</body>
+</html>

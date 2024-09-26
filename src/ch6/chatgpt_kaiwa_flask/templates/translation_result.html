@@ -1,0 +1,24 @@
+<!-- 「base.html」を継承 -->
+{% extends "base.html" %}
+
+<!-- タイトルブロックを書き換える -->
+{% block title %}
+日英翻訳ページ
+{% endblock %}
+
+<!-- ヘッダブロックを書き換える -->
+{% block header %}
+翻訳結果
+{% endblock %}
+
+<!-- コンテンツブロックを書き換える -->
+{% block contents %}
+<!-- 翻訳結果の表示 --- (※９)  -->
+<form action="{{url_for('tokenize')}}" method="POST">
+    <div class="card p-6">
+        {{translation_result|safe}}
+    </div>
+    <input type="submit" value="単語に分割" class="button is-primary">
+    <a href="{{url_for('index')}}" class="button is-primary">トップへ戻る</a>
+</form>
+{% endblock %}

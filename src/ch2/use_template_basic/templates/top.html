@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板のトップページ</title>
+</head>
+
+<body>
+    <header>
+        <!-- 「login_user_name」変数の値で差し替え ---（※４）-->
+        <h1>掲示板のトップページ - {{login_user_name}}さん</h1>
+        <!-- メニュー -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- 「/」にアクセスするURLを作成 ---（※５） -->
+                    <a href="{{url_for('index')}}">トップページ</a>
+                </li>
+                <li>
+                    <!-- 「/write」にアクセスするURLを作成 ---（※６） -->
+                    <a href="{{url_for('write')}}">書き込みページ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

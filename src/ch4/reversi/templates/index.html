@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>Reversi</title>
+    <style>
+    .center { display: flex; justify-content: center; align-items: center; }
+    .w-board { width: 400px; }
+    .w-stone { width: 50px; }
+    </style>
+</head><body>
+    <header class="center m-0 p-0 mb-2">
+        <h1 class="title is-primary p-3 has-background-info w-board">
+            リバーシ</h1>
+    </header>
+    <div class="m-0 p-0 center mb-2">
+        <!-- リバーシの盤面を表示 --- (※1) -->
+        <div id="board" class="box p-0 m-0 w-board">
+            {% for y in range(0, 8) %}
+            <div style="line-height:0;" class="p-0 m-0 is-flex">
+                {% for x in range(0, 8) %}
+                    {% if can_place %}
+                    <a class="p-0 m-0 w-stone"
+                     href="/place/{{y}}/{{x}}?me={{me}}&token={{token}}">
+                    {% else %}<a>{% endif %}
+                        <img src="static/stone-{{ board[y][x] }}.png">
+                    </a>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="m-0 p-0 center">
+        <!-- 情報を表示とスキップ・リセットボタンを表示 --- (※2) -->
+        <div class="p-3 box w-board">
+            <div class="is-size-4 has-background-primary-light">
+                <p class="p-3">{{ msg }}</p></div>
+            <div class="is-size-6 has-text-right">
+                石の数: ●黒 {{ count[0] }} / ○白 {{ count[1] }}
+            </div>
+            <div>
+                {% if can_place %}
+                <a class="button" style="width: 8em;"
+                 href="/skip?who={{me}}&token={{token}}">Skip</a>
+                {% endif %}
+                <a class="button" href="/reset">Reset</a>
+            </div>
+        </div>
+    </div>
+    <script> // 画面を3秒に1回更新する --- (※3)
+        setTimeout(function() { location.reload(); }, 3000);
+    </script>
+</body></html>

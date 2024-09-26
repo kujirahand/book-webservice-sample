@@ -1,0 +1,42 @@
+<html><meta charset="UTF-8"><body>
+    <h1>手描き数字の判定プログラム</h1>
+    <canvas id="cv" width="280" height="280"
+        style="border: 1px solid;"></canvas>
+    <div id="result" style="font-size:2em; color:red"></div>
+    <script>
+        // HTMLのDOM要素を取得 --- (*1)
+        const cv = document.getElementById('cv');
+        const ctx = cv.getContext('2d');
+        const result = document.getElementById('result');
+        // マウス操作で描画を行う --- (*2)
+        let drawing = false; // ペンが下りているかどうか
+        cv.onmousedown = function (e) {
+            drawing = true;
+            ctx.beginPath();
+            ctx.lineWidth = 20;
+        };
+        cv.onmouseup = function (e) {
+            drawing = false;
+            recognize(); // 描画終了したらすぐにサーバに送信 --- (*3)
+        };
+        cv.onmousemove = function (e) {
+            if (!drawing) return;
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+        };
+        // サーバーに問い合わせて手書き数字を判定する --- (*4)
+        async function recognize() {
+            // 描画内容を得る
+            const data = cv.toDataURL('image/png');
+            // サーバーに送信して応答を得る
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: data })
+            });
+            const r = await response.json();
+            result.innerHTML = '判定結果: ' + r.result;
+        }
+    </script>
+</body>
+</html>

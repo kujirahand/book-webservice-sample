@@ -1,0 +1,41 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+<nav class="card">
+    <div class="card-content">
+        <form action="/" method="post">
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input" type="text" name="query"
+                    value="{{ query }}"
+                     placeholder="検索キーワード">
+                </div>
+                <div class="control">
+                    <button class="button is-info" type="submit">検索</button>
+                </div>
+            </div>
+    </div>
+</nav>
+{% if results %}
+ <nav class="card">
+    <div class="card-heading">
+        <p class="card-header-title">検索結果: {{ query }}</p>
+    </div>
+    <div class="card-content">
+        {% for it in results %}
+        <article class="message is-info">
+            <div class="message-header">
+                <a href="/text/{{ it['file'] }}">
+                    ■ {{ it['file'] }} ... {{ it['rate'] }}</a>
+            </div>
+            <div class="message-body">{{ it['sentence'] }}</div>
+        </article>
+        {% else %}
+        <article class="message is-danger">
+            <div class="message-body">該当する文書が見つかりませんでした。</div>
+        {% endfor %}
+    </div>
+</nav>
+{% endif %}
+{% endblock %}

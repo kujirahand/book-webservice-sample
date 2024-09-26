@@ -1,0 +1,31 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+ <div class="card">
+    <header class="card-header">
+        <p class="card-header-title">{{ message }}</p>
+    </header>
+    <div class="card-content">
+        <form action="/login" method="post">
+            <div class="field">
+                <label class="label">Eメール:</label>
+                <div class="control">
+                    <input class="input" type="email" name="email">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">パスワード:</label>
+                <div class="control">
+                    <input class="input" type="password" name="password">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary">ログイン</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

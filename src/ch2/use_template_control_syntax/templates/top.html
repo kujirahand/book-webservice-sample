@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板のトップページ</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <!-- 「login_user_name」の値に応じた条件分岐 ---（※４）-->
+            {% if login_user_name %}
+            掲示板のトップページ - {{login_user_name}}さん
+            {% else %}
+            掲示板のトップページ - ゲストさん
+            {% endif %}
+        </h1>
+        <!-- メニュー -->
+        <nav>
+            <ul>
+                <li>
+                    <!-- 「/」にアクセスするURLを作成 -->
+                    <a href="{{url_for('index')}}">トップページ</a>
+                </li>
+                <li>
+                    <!-- 「/write」にアクセスするURLを作成 -->
+                    <a href="{{url_for('write')}}">書き込みページ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 繰り返し機能を使って「message_list」の要素を表示 ---（※５）-->
+        {% for message in message_list %}
+        <article>
+            <p>{{message.id}} - {{message.user_name}}</p>
+            <p>{{message.contents}}</p>
+        </article>
+        {% endfor %}
+    </main>
+</body>
+
+</html>

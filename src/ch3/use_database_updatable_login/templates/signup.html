@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+アカウント登録ページ
+{% endblock %}
+
+{% block header %}
+アカウント登録ページ
+{% endblock %}
+
+{% block contents %}
+
+<!-- アカウント登録フォーム (※9) -->
+<form method="POST">
+    <label for="username">ユーザ名</label>
+    <input type="text" name="username" required>
+    <label for="password">パスワード</label>
+    <input type="password" name="password" required>
+    <input type="submit" value="新規登録">
+</form>
+{% endblock %}

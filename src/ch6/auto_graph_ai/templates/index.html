@@ -1,0 +1,55 @@
+<!-- 「base.html」を継承 -->
+{% extends "base.html" %}
+
+<!-- コンテンツブロックを書き換える -->
+{% block contents %}
+<!-- ユーザー入力ボックスを定義--- (※1) -->
+<div class="card">
+    <div class="card p-3">
+        <label class="label" for="input">
+            作図したい事柄を入力してください:</label><br>
+        <textarea id="input" name="input" rows="3" cols="60"
+         class="textarea"></textarea>
+        <button id="run" class="button is-primary">作図実行</button>
+    </div>
+</div>
+<!-- 作図した結果を表示する部分--- (※2) -->
+<div class="card p-3">
+    <div id="zu"></div>
+    <div><pre id="note"></pre></div>
+</div>
+<script type="module">
+    // Mermaidのライブラリを読み込み --- (※3)
+    import mermaid
+    from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: false }); // ライブラリの初期化
+    // JavaScriptでデータをサーバーに送信する処理を記述 --- (※4)
+    const api = "/api/sakuzu"
+    const runButton = document.getElementById("run")
+    const zu = document.querySelector("#zu")
+    runButton.addEventListener("click", () => { // クリックした時 --- (※5)
+        zu.innerHTML = "... 現在作図中です ..."
+        runButton.disabled = true; // ボタンを連打できないように無効にする
+        const input = document.getElementById("input").value;
+        // 非同期通信でサーバーと通信する --- (※6)
+        fetch(api, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ input }),
+        })
+        .then((response) => response.json())
+        .then(async (data) => {
+            // サーバーから結果が戻ってきた時 ---- (※7)
+            runButton.disabled = false; // ボタンの状態を戻す
+            zu.innerHTML = ""
+            console.log(data);
+            if (data.code) {
+                // Mermaidで作図を行う --- (※8)
+                const {svg} = await mermaid.render('diagram', data.code)
+                zu.innerHTML = svg
+                document.getElementById("note").innerText = data.result
+            }
+        });
+    });
+</script>
+{% endblock %}

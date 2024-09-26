@@ -1,0 +1,16 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+<div class="card p-3">
+    <form method="POST">
+        <label class="label" for="title">タイトル:</label>
+        <input id="title" name="title" type="text"
+            value="{{ it.title }}" class="input">
+        <label class="label" for="body">本文:</label>
+        <textarea id="body" name="body"
+            class="textarea">{{ it.body }}</textarea>
+        <input type="submit" value="保存" class="button is-primary">
+    </form>
+</div>
+{% endblock %}

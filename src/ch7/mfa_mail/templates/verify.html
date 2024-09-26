@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ワンタイムパスワード確認</title>
+</head>
+<body>
+    <h1>ワンタイムパスワード確認</h1>
+    <form action="{{ url_for('verify') }}" method="post">
+        <label for="otp">ワンタイムパスワード:</label>
+        <input type="text" name="otp" required><br><br>
+        <button type="submit">確認</button>
+    </form>
+</body>
+</html>

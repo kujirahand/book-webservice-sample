@@ -1,0 +1,34 @@
+name: Selenium Test
+
+on:
+  # テストコードのディレクトリに変更があった場合に起動する
+  push:
+    branches:
+      - main
+    paths: 
+      - 'test/**' 
+   # 手動でワークフローを起動する
+  workflow_dispatch:
+  # デプロイワークフローが完了した場合に起動する
+  workflow_run:
+    workflows: ["Deploy to Test Env"]
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python version
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: pip install -r test/requirements.txt
+
+    - name: Execute test
+      run: python test/app.py  # テストコードのファイル名

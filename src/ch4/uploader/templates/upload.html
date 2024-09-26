@@ -1,0 +1,44 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+ <div class="card">
+    <header class="card-header">
+        <p class="card-header-title">ファイルのアップロード</p>
+    </header>
+    <div class="card-content">
+        <form action="/upload" method="post"
+            enctype="multipart/form-data">
+            <div class="field">
+                <label class="label">共有相手を選択:</label>
+                <div class="control">
+                    <select class="input" name="user_id">
+                        <option value="0">ログインしている全員</option>
+                        {% for user in users %}
+                        <option value="{{ user.id }}">{{ user.email }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">コメント:</label>
+                <div class="control">
+                    <input class="input" type="text" name="comment">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">ファイルを指定:</label>
+                <div class="control">
+                    <input class="input" type="file" name="file">
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="control">
+                    <input class="button is-primary" type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

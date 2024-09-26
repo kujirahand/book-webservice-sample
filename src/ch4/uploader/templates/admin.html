@@ -1,0 +1,54 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">ユーザーの追加 - {{ message }}</p>
+    </header>
+    <div class="card-content">
+        <form action="/" method="post">
+            <div class="field">
+                <label class="label">追加するユーザーのEメール:</label>
+                <div class="control">
+                    <input class="input" type="email" name="email">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">追加するユーザーのパスワード:</label>
+                <div class="control">
+                    <input class="input" type="password" name="password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">パスワード(もう一度):</label>
+                <div class="control">
+                    <input class="input" type="password" name="password2">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary">ユーザーを追加</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">ユーザーの管理</p>
+    </header>
+    <div class="card-content">
+        <ul>
+            {% for user in users %}
+            <li class="box">
+                ({{ user.id }}) {{ user.email }}
+                <a href="/delete_user/{{ user.id }}" class="tag">削除</a>
+            </li>
+            {% else %}
+            <li>ユーザーはいません</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+Flask==3.0.3
+Flask-Mail==0.10.0
+Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
+PyOTP==2.9.0

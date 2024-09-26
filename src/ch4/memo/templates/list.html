@@ -1,0 +1,18 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+ <div class='card p-3'>
+    編集したいメモを選んでください:
+    <ul class='grid'>
+        {% for it in items %}
+        <li class="cell card p-4 m-2">
+            <a href="/memo/{{ it.id }}">
+                {% if it.id != 0 %}📍{% endif %}
+                {{ it.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

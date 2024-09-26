@@ -1,0 +1,14 @@
+<!-- base.html を拡張する -->
+{% extends "base.html" %}
+<!-- base.html の contents を書き換える -->
+{% block contents %}
+<style> h1, h2 { font-size: 1.5em; padding: 0.5em; } </style>
+<nav class="card">
+    <div class="card-heading">
+        <p class="card-header-title">ファイル名: {{ file }}</p>
+    </div>
+    <div class="card-content">
+        <div>{{ markdown | safe }}</div>
+    </div>
+</nav>
+{% endblock %}

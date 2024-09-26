@@ -48,7 +48,7 @@ def index_post():
     date = request.form.get("date", "")
     event = request.form.get("event", "")
     # 入力を検証する --- (※11)
-    i = re.match("(\d{4})-(\d{2})-\d{2}", date)
+    i = re.match(r"(\d{4})-(\d{2})-\d{2}", date)
     if not i:
         return "日付形式が不正"
     year, month = int(i.group(1)), int(i.group(2))

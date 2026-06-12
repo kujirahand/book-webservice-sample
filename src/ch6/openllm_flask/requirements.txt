@@ -1,5 +1,5 @@
 openai
 python-dotenv
-Flask==3.0.3
+Flask==3.1.3
 markdown
 ollama
